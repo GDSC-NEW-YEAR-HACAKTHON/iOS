@@ -17,6 +17,9 @@
 		8882095D2B51551D0017EBD9 /* ProfessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882095C2B51551D0017EBD9 /* ProfessUITests.swift */; };
 		8882095F2B51551D0017EBD9 /* ProfessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882095E2B51551D0017EBD9 /* ProfessUITestsLaunchTests.swift */; };
 		8882096C2B515D980017EBD9 /* SettingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882096B2B515D980017EBD9 /* SettingGoal.swift */; };
+		88AC9F622B51834E00FD346C /* SettingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9F612B51834E00FD346C /* SettingDetail.swift */; };
+		88AC9F642B519AE000FD346C /* DetailCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AC9F632B519AE000FD346C /* DetailCard.xib */; };
+		88AC9F662B519B1200FD346C /* DetailCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9F652B519B1200FD346C /* DetailCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		8882095C2B51551D0017EBD9 /* ProfessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessUITests.swift; sourceTree = "<group>"; };
 		8882095E2B51551D0017EBD9 /* ProfessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8882096B2B515D980017EBD9 /* SettingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGoal.swift; sourceTree = "<group>"; };
+		88AC9F612B51834E00FD346C /* SettingDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetail.swift; sourceTree = "<group>"; };
+		88AC9F632B519AE000FD346C /* DetailCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCard.xib; sourceTree = "<group>"; };
+		88AC9F652B519B1200FD346C /* DetailCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +110,7 @@
 				8882093B2B51551B0017EBD9 /* AppDelegate.swift */,
 				8882093D2B51551B0017EBD9 /* SceneDelegate.swift */,
 				8882093F2B51551B0017EBD9 /* ViewController.swift */,
-				8882096B2B515D980017EBD9 /* SettingGoal.swift */,
+				88AC9F602B51831D00FD346C /* Challenger */,
 				888209412B51551B0017EBD9 /* Main.storyboard */,
 				888209442B51551D0017EBD9 /* Assets.xcassets */,
 				888209462B51551D0017EBD9 /* LaunchScreen.storyboard */,
@@ -128,6 +134,17 @@
 				8882095E2B51551D0017EBD9 /* ProfessUITestsLaunchTests.swift */,
 			);
 			path = ProfessUITests;
+			sourceTree = "<group>";
+		};
+		88AC9F602B51831D00FD346C /* Challenger */ = {
+			isa = PBXGroup;
+			children = (
+				8882096B2B515D980017EBD9 /* SettingGoal.swift */,
+				88AC9F612B51834E00FD346C /* SettingDetail.swift */,
+				88AC9F632B519AE000FD346C /* DetailCard.xib */,
+				88AC9F652B519B1200FD346C /* DetailCardViewController.swift */,
+			);
+			path = Challenger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88AC9F642B519AE000FD346C /* DetailCard.xib in Resources */,
 				888209482B51551D0017EBD9 /* LaunchScreen.storyboard in Resources */,
 				888209452B51551D0017EBD9 /* Assets.xcassets in Resources */,
 				888209432B51551B0017EBD9 /* Main.storyboard in Resources */,
@@ -262,9 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				888209402B51551B0017EBD9 /* ViewController.swift in Sources */,
+				88AC9F622B51834E00FD346C /* SettingDetail.swift in Sources */,
 				8882096C2B515D980017EBD9 /* SettingGoal.swift in Sources */,
 				8882093C2B51551B0017EBD9 /* AppDelegate.swift in Sources */,
 				8882093E2B51551B0017EBD9 /* SceneDelegate.swift in Sources */,
+				88AC9F662B519B1200FD346C /* DetailCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailCardViewController" customModule="Profess" customModuleProvider="target">
+            <connections>
+                <outlet property="stepBoxView" destination="qFj-oD-po1" id="ohd-Yy-WJo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="Detail">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="183"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="0j7-DB-5IE">
+                    <rect key="frame" x="216" y="143" width="102" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <locale key="locale" localeIdentifier="ko_KR"/>
+                </datePicker>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Xfd-wZ-GJG">
+                    <rect key="frame" x="44" y="143.33333333333334" width="112" height="34.333333333333343"/>
+                    <locale key="locale" localeIdentifier="ko_KR"/>
+                </datePicker>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kfO-Ew-Xdv">
+                    <rect key="frame" x="16" y="149.66666666666666" width="25" height="22"/>
+                    <color key="tintColor" red="0.30588235289999999" green="0.28235294119999998" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="kfO-Ew-Xdv" secondAttribute="height" multiplier="1:1" id="Ly4-th-6mT"/>
+                        <constraint firstAttribute="width" constant="25" id="UNR-0d-Hwh"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmQ-md-9sL">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="29"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFj-oD-po1">
+                    <rect key="frame" x="0.0" y="37" width="330" height="91"/>
+                    <color key="tintColor" red="0.30588235289999999" green="0.28235294119999998" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarm" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fc2-iu-fod">
+                    <rect key="frame" x="191" y="148" width="25" height="24"/>
+                    <color key="tintColor" red="0.30588235289999999" green="0.28235294119999998" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Fc2-iu-fod" secondAttribute="height" multiplier="1:1" id="jbD-73-zUh"/>
+                        <constraint firstAttribute="width" constant="25" id="wub-Rv-dlh"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qFj-oD-po1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1E8-Gw-fkN"/>
+                <constraint firstItem="kfO-Ew-Xdv" firstAttribute="top" secondItem="qFj-oD-po1" secondAttribute="bottom" constant="20" id="3X4-ZJ-xWl"/>
+                <constraint firstItem="qFj-oD-po1" firstAttribute="leading" secondItem="PmQ-md-9sL" secondAttribute="leading" id="5fo-cQ-9pe"/>
+                <constraint firstItem="kfO-Ew-Xdv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="GuT-w8-lSs"/>
+                <constraint firstItem="kfO-Ew-Xdv" firstAttribute="bottom" secondItem="Fc2-iu-fod" secondAttribute="bottom" id="S40-uH-HQ8"/>
+                <constraint firstItem="0j7-DB-5IE" firstAttribute="leading" secondItem="Fc2-iu-fod" secondAttribute="trailing" id="Zct-6j-udT"/>
+                <constraint firstItem="kfO-Ew-Xdv" firstAttribute="centerY" secondItem="0j7-DB-5IE" secondAttribute="centerY" id="bTx-NV-LYl"/>
+                <constraint firstItem="Fc2-iu-fod" firstAttribute="leading" secondItem="Xfd-wZ-GJG" secondAttribute="trailing" constant="35" id="dyG-Al-6CP"/>
+                <constraint firstAttribute="trailing" secondItem="qFj-oD-po1" secondAttribute="trailing" id="fp9-kp-J2v"/>
+                <constraint firstItem="qFj-oD-po1" firstAttribute="top" secondItem="PmQ-md-9sL" secondAttribute="bottom" constant="8" symbolic="YES" id="g5L-vd-4Hq"/>
+                <constraint firstItem="qFj-oD-po1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="37" id="srN-oL-G8e"/>
+                <constraint firstItem="Xfd-wZ-GJG" firstAttribute="leading" secondItem="kfO-Ew-Xdv" secondAttribute="trailing" constant="3" id="ykw-nx-0t9"/>
+                <constraint firstItem="kfO-Ew-Xdv" firstAttribute="centerY" secondItem="Xfd-wZ-GJG" secondAttribute="centerY" id="zRn-iU-Lez"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="111.45038167938931" y="19.366197183098592"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alarm" catalog="system" width="123" height="128"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

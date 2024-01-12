@@ -6,9 +6,12 @@
 //
 
 import UIKit
-
+protocol DataTransferDelegate: AnyObject {
+    func sendData(data: String)
+}
 class SettingGoal: UIViewController {
-//    private let datePicker = UIDatePicker()
+    @IBOutlet weak var createGoalButton: UIButton!
+    //    private let datePicker = UIDatePicker()
     @IBOutlet weak var finalDate: UIDatePicker!
     @IBOutlet weak var finalTime: UIDatePicker!
     @IBOutlet weak var goalTitle: UITextField!
@@ -17,12 +20,13 @@ class SettingGoal: UIViewController {
     var selectedDate: String = ""
     var selectedTitle: String? = ""
     var selectedNumSteps: Int? = 0
-    
+    var delegate: DataTransferDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         finalDate.addTarget(self, action: #selector(dateValueChanged(_:)), for: .valueChanged)
         finalTime.addTarget(self, action: #selector(timeValueChanged(_:)), for: .valueChanged)
+        createGoalButton.layer.cornerRadius = 8
     }
     
 
@@ -50,4 +54,11 @@ class SettingGoal: UIViewController {
         selectedNumSteps = Int(numSteps.text!)
         }
 
+    @IBAction func showSettingDetailView(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "SettingDetailStoryboard") as? SettingDetail else {
+            return
+        }
+        vc.numSteps = selectedNumSteps
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
