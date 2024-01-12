@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D15AB522B5161520014EB1D /* LockStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB502B5161520014EB1D /* LockStepTableViewCell.swift */; };
+		2D15AB532B5161520014EB1D /* LockStepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D15AB512B5161520014EB1D /* LockStepTableViewCell.xib */; };
+		2D15AB552B5161970014EB1D /* WatchHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB542B5161970014EB1D /* WatchHomeViewController.swift */; };
+		2D15AB632B516C650014EB1D /* UnlockStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB612B516C650014EB1D /* UnlockStepTableViewCell.swift */; };
+		2D15AB642B516C650014EB1D /* UnlockStepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D15AB622B516C650014EB1D /* UnlockStepTableViewCell.xib */; };
+		2D15AB662B5179850014EB1D /* AddChallengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB652B5179850014EB1D /* AddChallengerViewController.swift */; };
+		2D15AB6A2B5194E60014EB1D /* InviteCodeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB692B5194E60014EB1D /* InviteCodeInput.swift */; };
+		2D15AB6C2B51953D0014EB1D /* InviteCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB6B2B51953D0014EB1D /* InviteCodeModel.swift */; };
+		2D15AB6E2B5196180014EB1D /* InviteCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB6D2B5196180014EB1D /* InviteCodeManager.swift */; };
 		8882093C2B51551B0017EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882093B2B51551B0017EBD9 /* AppDelegate.swift */; };
 		8882093E2B51551B0017EBD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882093D2B51551B0017EBD9 /* SceneDelegate.swift */; };
 		888209402B51551B0017EBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882093F2B51551B0017EBD9 /* ViewController.swift */; };
@@ -36,6 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D15AB502B5161520014EB1D /* LockStepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockStepTableViewCell.swift; sourceTree = "<group>"; };
+		2D15AB512B5161520014EB1D /* LockStepTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockStepTableViewCell.xib; sourceTree = "<group>"; };
+		2D15AB542B5161970014EB1D /* WatchHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHomeViewController.swift; sourceTree = "<group>"; };
+		2D15AB612B516C650014EB1D /* UnlockStepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockStepTableViewCell.swift; sourceTree = "<group>"; };
+		2D15AB622B516C650014EB1D /* UnlockStepTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnlockStepTableViewCell.xib; sourceTree = "<group>"; };
+		2D15AB652B5179850014EB1D /* AddChallengerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChallengerViewController.swift; sourceTree = "<group>"; };
+		2D15AB692B5194E60014EB1D /* InviteCodeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeInput.swift; sourceTree = "<group>"; };
+		2D15AB6B2B51953D0014EB1D /* InviteCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeModel.swift; sourceTree = "<group>"; };
+		2D15AB6D2B5196180014EB1D /* InviteCodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeManager.swift; sourceTree = "<group>"; };
 		888209382B51551B0017EBD9 /* Profess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Profess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8882093B2B51551B0017EBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8882093D2B51551B0017EBD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +94,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D15AB562B5161B40014EB1D /* WatcherHome */ = {
+			isa = PBXGroup;
+			children = (
+				2D15AB5C2B5162830014EB1D /* challengeload */,
+				2D15AB592B5162190014EB1D /* cell */,
+			);
+			path = WatcherHome;
+			sourceTree = "<group>";
+		};
+		2D15AB572B5161CF0014EB1D /* Watcher */ = {
+			isa = PBXGroup;
+			children = (
+				2D15AB562B5161B40014EB1D /* WatcherHome */,
+				2D15AB582B5161E60014EB1D /* AddChallengerCode */,
+			);
+			path = Watcher;
+			sourceTree = "<group>";
+		};
+		2D15AB582B5161E60014EB1D /* AddChallengerCode */ = {
+			isa = PBXGroup;
+			children = (
+				2D15AB682B5194A80014EB1D /* InviteCodeInput */,
+				2D15AB672B5194940014EB1D /* cell */,
+				2D15AB652B5179850014EB1D /* AddChallengerViewController.swift */,
+			);
+			path = AddChallengerCode;
+			sourceTree = "<group>";
+		};
+		2D15AB592B5162190014EB1D /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				2D15AB5F2B516C2F0014EB1D /* UnlockCell */,
+				2D15AB5E2B516C170014EB1D /* LockCell */,
+				2D15AB542B5161970014EB1D /* WatchHomeViewController.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		2D15AB5C2B5162830014EB1D /* challengeload */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = challengeload;
+			sourceTree = "<group>";
+		};
+		2D15AB5E2B516C170014EB1D /* LockCell */ = {
+			isa = PBXGroup;
+			children = (
+				2D15AB502B5161520014EB1D /* LockStepTableViewCell.swift */,
+				2D15AB512B5161520014EB1D /* LockStepTableViewCell.xib */,
+			);
+			path = LockCell;
+			sourceTree = "<group>";
+		};
+		2D15AB5F2B516C2F0014EB1D /* UnlockCell */ = {
+			isa = PBXGroup;
+			children = (
+				2D15AB612B516C650014EB1D /* UnlockStepTableViewCell.swift */,
+				2D15AB622B516C650014EB1D /* UnlockStepTableViewCell.xib */,
+			);
+			path = UnlockCell;
+			sourceTree = "<group>";
+		};
+		2D15AB672B5194940014EB1D /* cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		2D15AB682B5194A80014EB1D /* InviteCodeInput */ = {
+			isa = PBXGroup;
+			children = (
+				2D15AB692B5194E60014EB1D /* InviteCodeInput.swift */,
+				2D15AB6B2B51953D0014EB1D /* InviteCodeModel.swift */,
+				2D15AB6D2B5196180014EB1D /* InviteCodeManager.swift */,
+			);
+			path = InviteCodeInput;
+			sourceTree = "<group>";
+		};
 		8882092F2B51551B0017EBD9 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +201,7 @@
 				8882093D2B51551B0017EBD9 /* SceneDelegate.swift */,
 				8882093F2B51551B0017EBD9 /* ViewController.swift */,
 				888209412B51551B0017EBD9 /* Main.storyboard */,
+				2D15AB572B5161CF0014EB1D /* Watcher */,
 				888209442B51551D0017EBD9 /* Assets.xcassets */,
 				888209462B51551D0017EBD9 /* LaunchScreen.storyboard */,
 				888209492B51551D0017EBD9 /* Info.plist */,
@@ -231,9 +330,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D15AB642B516C650014EB1D /* UnlockStepTableViewCell.xib in Resources */,
 				888209482B51551D0017EBD9 /* LaunchScreen.storyboard in Resources */,
 				888209452B51551D0017EBD9 /* Assets.xcassets in Resources */,
 				888209432B51551B0017EBD9 /* Main.storyboard in Resources */,
+				2D15AB532B5161520014EB1D /* LockStepTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +360,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				888209402B51551B0017EBD9 /* ViewController.swift in Sources */,
+				2D15AB6C2B51953D0014EB1D /* InviteCodeModel.swift in Sources */,
+				2D15AB632B516C650014EB1D /* UnlockStepTableViewCell.swift in Sources */,
+				2D15AB6A2B5194E60014EB1D /* InviteCodeInput.swift in Sources */,
 				8882093C2B51551B0017EBD9 /* AppDelegate.swift in Sources */,
 				8882093E2B51551B0017EBD9 /* SceneDelegate.swift in Sources */,
+				2D15AB662B5179850014EB1D /* AddChallengerViewController.swift in Sources */,
+				2D15AB552B5161970014EB1D /* WatchHomeViewController.swift in Sources */,
+				2D15AB522B5161520014EB1D /* LockStepTableViewCell.swift in Sources */,
+				2D15AB6E2B5196180014EB1D /* InviteCodeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +550,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9KR47X6UHQ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Profess/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -450,12 +558,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.Profess;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Profess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -470,7 +579,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9KR47X6UHQ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Profess/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -478,12 +587,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.Profess;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Profess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
