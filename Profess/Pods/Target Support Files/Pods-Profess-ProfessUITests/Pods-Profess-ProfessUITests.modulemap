@@ -1,0 +1,6 @@
+framework module Pods_Profess_ProfessUITests {
+  umbrella header "Pods-Profess-ProfessUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
