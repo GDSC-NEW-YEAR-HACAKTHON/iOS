@@ -8,22 +8,46 @@
 import UIKit
 
 class SettingGoal: UIViewController {
-
+//    private let datePicker = UIDatePicker()
+    @IBOutlet weak var finalDate: UIDatePicker!
+    @IBOutlet weak var finalTime: UIDatePicker!
+    @IBOutlet weak var goalTitle: UITextField!
+    @IBOutlet weak var numSteps: UITextField!
+    var selectedTime: String = ""
+    var selectedDate: String = ""
+    var selectedTitle: String? = ""
+    var selectedNumSteps: Int? = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        finalDate.addTarget(self, action: #selector(dateValueChanged(_:)), for: .valueChanged)
+        finalTime.addTarget(self, action: #selector(timeValueChanged(_:)), for: .valueChanged)
     }
     
 
-    /*
-    // MARK: - Navigation
+    @objc func dateValueChanged(_ sender: UIDatePicker) {
+            // datePicker의 값을 "yyyy-MM-dd" 형식의 문자열로 변환합니다.
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+            selectedDate = dateFormatter.string(from: sender.date)
+            print("Selected Date: \(selectedDate)")
+            
+            // 이제 selectedDate를 필요한 변수에 저장하거나 다른 작업에 활용할 수 있습니다.
+        }
+    @objc func timeValueChanged(_ sender: UIDatePicker) {
+            let timeFormatter = DateFormatter()
+            timeFormatter.dateFormat = "HH:mm:ss"
+
+            selectedTime = timeFormatter.string(from: sender.date)
+            print("Selected Date: \(selectedDate)")
+        }
+    @objc func goalTitleChanged() {
+        selectedTitle = goalTitle.text
+        }
+    @objc func numStepsChanged() {
+        selectedNumSteps = Int(numSteps.text!)
+        }
 
 }

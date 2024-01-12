@@ -104,9 +104,9 @@
 				8882093B2B51551B0017EBD9 /* AppDelegate.swift */,
 				8882093D2B51551B0017EBD9 /* SceneDelegate.swift */,
 				8882093F2B51551B0017EBD9 /* ViewController.swift */,
+				8882096B2B515D980017EBD9 /* SettingGoal.swift */,
 				888209412B51551B0017EBD9 /* Main.storyboard */,
 				888209442B51551D0017EBD9 /* Assets.xcassets */,
-				8882096B2B515D980017EBD9 /* SettingGoal.swift */,
 				888209462B51551D0017EBD9 /* LaunchScreen.storyboard */,
 				888209492B51551D0017EBD9 /* Info.plist */,
 			);
@@ -446,7 +446,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9KR47X6UHQ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Profess/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -459,7 +459,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.Profess;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Profess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -474,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9KR47X6UHQ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Profess/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -487,7 +487,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.Profess;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Profess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
