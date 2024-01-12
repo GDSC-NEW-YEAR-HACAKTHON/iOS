@@ -17,4 +17,11 @@ pod 'Alamofire', '5.1'
     # Pods for testing
   end
 
+# 필요한 모듈 추가
+pod 'KakaoSDKCommon'  # 필수 요소를 담은 공통 모듈
+pod 'KakaoSDKAuth'  # 사용자 인증
+pod 'KakaoSDKUser'  # 카카오 로그인, 사용자 관리
+pod 'KakaoSDKTalk'  # 친구, 메시지(카카오톡)
+pod 'KakaoSDKLink'  # 메시지(카카오링크)
+
 end

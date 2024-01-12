@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 protocol DataTransferDelegate: AnyObject {
     func sendData(data: String)
 }
@@ -26,7 +27,11 @@ class SettingGoal: UIViewController {
         
         finalDate.addTarget(self, action: #selector(dateValueChanged(_:)), for: .valueChanged)
         finalTime.addTarget(self, action: #selector(timeValueChanged(_:)), for: .valueChanged)
+        goalTitle.addTarget(self, action: #selector(goalTitleChanged), for: .editingChanged)
+        numSteps.addTarget(self, action: #selector(numStepsChanged), for: .editingChanged)
         createGoalButton.layer.cornerRadius = 8
+        goalTitle.borderStyle = .none
+        numSteps.borderStyle = .none
     }
     
 
@@ -35,7 +40,7 @@ class SettingGoal: UIViewController {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
 
-            selectedDate = dateFormatter.string(from: sender.date)
+        selectedDate = dateFormatter.string(from: finalDate.date)
             print("Selected Date: \(selectedDate)")
             
             // 이제 selectedDate를 필요한 변수에 저장하거나 다른 작업에 활용할 수 있습니다.
@@ -44,7 +49,7 @@ class SettingGoal: UIViewController {
             let timeFormatter = DateFormatter()
             timeFormatter.dateFormat = "HH:mm:ss"
 
-            selectedTime = timeFormatter.string(from: sender.date)
+            selectedTime = timeFormatter.string(from: finalTime.date)
             print("Selected Date: \(selectedDate)")
         }
     @objc func goalTitleChanged() {
@@ -61,4 +66,5 @@ class SettingGoal: UIViewController {
         vc.numSteps = selectedNumSteps
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
