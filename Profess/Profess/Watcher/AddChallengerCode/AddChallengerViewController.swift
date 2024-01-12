@@ -19,19 +19,24 @@ class AddChallengerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
+    //MARK: -Actions
+    @IBAction func attendInviteCodeButtonTapped(_ sender: UIButton) {
+            let inviteCode = inputInviteCodeTextField.text ?? ""
 
-    /*
-    // MARK: - Navigation
+            let inviteCodeInput = InviteCodeInput(challengeCode: inviteCode)
+        
+            let dataManager = InviteCodeDataManager()
+            dataManager.posts(self, inviteCodeInput)
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        func navigateToWatchHomeViewController() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let watchHomeVC = storyboard.instantiateViewController(withIdentifier: "WatchHomeViewController") as? WatchHomeViewController {
+                self.navigationController?.pushViewController(watchHomeVC, animated: true)
+            }
+        }
+
 
 }

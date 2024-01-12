@@ -21,6 +21,12 @@ class LockStepTableViewCell: UITableViewCell {
         setupAttribute()
     }
     
+    // MARK: - LockStepTableViewCell Configuration
+    func configure(with step: challengeSteps, at index: Int) {
+        self.stepLabel.text = "STEP \(index + 1)"
+    }
+
+    
     private func setupAttribute() {
         stepDetailBackgroundView.layer.cornerRadius = 10
     }

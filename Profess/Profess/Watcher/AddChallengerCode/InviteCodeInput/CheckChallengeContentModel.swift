@@ -1,5 +1,5 @@
 //
-//  InviteCodeModel.swift
+//  CheckChallengeContentModel.swift
 //  Profess
 //
 //  Created by 정민지 on 1/13/24.
@@ -7,15 +7,17 @@
 
 import Foundation
 
-struct InviteCodeModel: Decodable {
+struct CheckChallengeContentModel : Decodable {
     var goal : String
     var deadline : Date
-    var postChallengeSteps : [postChallengeSteps]?
+    var code : String
+    var challengeSteps : [challengeSteps]?
 }
 
-struct postChallengeSteps : Decodable {
+struct challengeSteps : Decodable {
     var challengeStepId : Int
     var content : String
     var deadline : Date
     var completed : Bool
 }
+

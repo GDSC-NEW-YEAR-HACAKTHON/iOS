@@ -16,6 +16,8 @@
 		2D15AB6A2B5194E60014EB1D /* InviteCodeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB692B5194E60014EB1D /* InviteCodeInput.swift */; };
 		2D15AB6C2B51953D0014EB1D /* InviteCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB6B2B51953D0014EB1D /* InviteCodeModel.swift */; };
 		2D15AB6E2B5196180014EB1D /* InviteCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB6D2B5196180014EB1D /* InviteCodeManager.swift */; };
+		2DFB3BCD2B51C4C50022FD3E /* CheckChallengeContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BCC2B51C4C50022FD3E /* CheckChallengeContentModel.swift */; };
+		2DFB3BCF2B51C5CB0022FD3E /* CheckChallengeContentDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BCE2B51C5CB0022FD3E /* CheckChallengeContentDataManager.swift */; };
 		8882093C2B51551B0017EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882093B2B51551B0017EBD9 /* AppDelegate.swift */; };
 		8882093E2B51551B0017EBD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882093D2B51551B0017EBD9 /* SceneDelegate.swift */; };
 		888209402B51551B0017EBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882093F2B51551B0017EBD9 /* ViewController.swift */; };
@@ -64,6 +66,8 @@
 		2D15AB692B5194E60014EB1D /* InviteCodeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeInput.swift; sourceTree = "<group>"; };
 		2D15AB6B2B51953D0014EB1D /* InviteCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeModel.swift; sourceTree = "<group>"; };
 		2D15AB6D2B5196180014EB1D /* InviteCodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeManager.swift; sourceTree = "<group>"; };
+		2DFB3BCC2B51C4C50022FD3E /* CheckChallengeContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckChallengeContentModel.swift; path = Profess/Watcher/AddChallengerCode/InviteCodeInput/CheckChallengeContentModel.swift; sourceTree = SOURCE_ROOT; };
+		2DFB3BCE2B51C5CB0022FD3E /* CheckChallengeContentDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckChallengeContentDataManager.swift; path = Profess/Watcher/AddChallengerCode/InviteCodeInput/CheckChallengeContentDataManager.swift; sourceTree = SOURCE_ROOT; };
 		32730CB7BCEC43EF10C470FD /* Pods-ProfessTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProfessTests.debug.xcconfig"; path = "Target Support Files/Pods-ProfessTests/Pods-ProfessTests.debug.xcconfig"; sourceTree = "<group>"; };
 		508A92E0911902EE254DA1E2 /* Pods-Profess-ProfessUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profess-ProfessUITests.release.xcconfig"; path = "Target Support Files/Pods-Profess-ProfessUITests/Pods-Profess-ProfessUITests.release.xcconfig"; sourceTree = "<group>"; };
 		509B5476C8DC8F2E2DE24F69 /* Pods-Profess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profess.release.xcconfig"; path = "Target Support Files/Pods-Profess/Pods-Profess.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,7 +124,7 @@
 		2D15AB562B5161B40014EB1D /* WatcherHome */ = {
 			isa = PBXGroup;
 			children = (
-				2D15AB5C2B5162830014EB1D /* challengeload */,
+				2D15AB5C2B5162830014EB1D /* CheckChallengeContent */,
 				2D15AB592B5162190014EB1D /* cell */,
 			);
 			path = WatcherHome;
@@ -155,11 +159,13 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
-		2D15AB5C2B5162830014EB1D /* challengeload */ = {
+		2D15AB5C2B5162830014EB1D /* CheckChallengeContent */ = {
 			isa = PBXGroup;
 			children = (
+				2DFB3BCC2B51C4C50022FD3E /* CheckChallengeContentModel.swift */,
+				2DFB3BCE2B51C5CB0022FD3E /* CheckChallengeContentDataManager.swift */,
 			);
-			path = challengeload;
+			path = CheckChallengeContent;
 			sourceTree = "<group>";
 		};
 		2D15AB5E2B516C170014EB1D /* LockCell */ = {
@@ -528,9 +534,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFB3BCD2B51C4C50022FD3E /* CheckChallengeContentModel.swift in Sources */,
 				888209402B51551B0017EBD9 /* ViewController.swift in Sources */,
 				2D15AB6C2B51953D0014EB1D /* InviteCodeModel.swift in Sources */,
 				2D15AB632B516C650014EB1D /* UnlockStepTableViewCell.swift in Sources */,
+				2DFB3BCF2B51C5CB0022FD3E /* CheckChallengeContentDataManager.swift in Sources */,
 				2D15AB6A2B5194E60014EB1D /* InviteCodeInput.swift in Sources */,
 				8882093C2B51551B0017EBD9 /* AppDelegate.swift in Sources */,
 				8882093E2B51551B0017EBD9 /* SceneDelegate.swift in Sources */,
