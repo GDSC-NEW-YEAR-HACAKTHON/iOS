@@ -17,6 +17,9 @@ import UIKit
 
 import CommonCrypto
 
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 public class SdkCrypto {
     public static let shared = SdkCrypto()
     
@@ -178,7 +181,9 @@ public class SdkCrypto {
     }
 }
 
-///:nodoc:
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 extension SdkCrypto {
     public func generateCodeVerifier() -> String? {
         let uuid = UUID().uuidString
@@ -233,7 +238,9 @@ extension SdkCrypto {
     }
 }
 
-///:nodoc:
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 extension SdkCrypto {
     // MARK: - Helper ---------------------------------------------------------------------------------
     

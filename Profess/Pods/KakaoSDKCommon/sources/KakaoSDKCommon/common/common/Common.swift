@@ -15,6 +15,9 @@
 import Foundation
 import UIKit
 
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 public class Constants {
     static public let responseType = "code"
     
@@ -43,8 +46,11 @@ public class Constants {
         let device = UIDevice.current.model.replacingOccurrences(of: " ", with: "_")
         let appBundleId = Bundle.main.bundleIdentifier
         let appVersion = self.appVersion()
+        let customIdentifier = KakaoSDK.shared.sdkIdentifier()?.customIdentifier
         
-        return "sdk/\(sdkVersion) sdk_type/\(sdkType) os/ios-\(osVersion) lang/\(lang) res/\(resX)x\(resY) device/\(device) origin/\(appBundleId ?? "") app_ver/\(appVersion ?? "")"
+        let ka = "sdk/\(sdkVersion) sdk_type/\(sdkType) os/ios-\(osVersion) lang/\(lang) res/\(resX)x\(resY) device/\(device) origin/\(appBundleId ?? "") app_ver/\(appVersion ?? "")"
+        
+        return customIdentifier != nil ? "\(ka) \(customIdentifier!)":ka
     }
     
     static public func appVersion() -> String? {
@@ -57,13 +63,17 @@ public class Constants {
     }
 }
 
-///:nodoc:
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 public enum SdkType : String {
     case Swift = "swift"
     case RxSwift = "rx_swift"
 }
 
-///:nodoc:
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 public class ApprovalType {
     public static let shared = ApprovalType()
     public var type : String?
@@ -73,8 +83,32 @@ public class ApprovalType {
     }
 }
 
-///:nodoc:
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 public enum ApiType {
     case KApi
     case KAuth
+    case Apps
+}
+
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
+public class SdkIdentifier {
+    public let customIdentifier : String?
+    
+    public init(_ customIdentifier : String? = nil) {
+        self.customIdentifier = customIdentifier
+    }
+}
+
+/// 톡 간편로그인 호출 방식
+public enum LaunchMethod: String {
+    
+    /// 커스텀 스킴
+    case CustomScheme = "uri_scheme"
+    
+    /// 유니버셜 링크
+    case UniversalLink = "universal_link"
 }

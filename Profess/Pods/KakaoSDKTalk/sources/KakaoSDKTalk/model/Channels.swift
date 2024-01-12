@@ -15,7 +15,8 @@
 import Foundation
 
 /// 카카오톡 채널 추가상태 조회 API 응답 클래스입니다.
-/// - seealso: `TalkApi.channels`
+/// ## SeeAlso
+/// - ``TalkApi/channels(publicIds:completion:)``
 public struct Channels : Codable {
     
     // MARK: Fields
@@ -24,7 +25,8 @@ public struct Channels : Codable {
     public let userId: Int64?
     
     /// 사용자의 채널 추가상태 목록
-    /// - seealso: `Channel`
+    /// ## SeeAlso
+    /// - ``Channel``
     public let channels: [Channel]?
     
     enum CodingKeys : String, CodingKey {
@@ -66,6 +68,27 @@ public struct Channel : Codable {
         case encodedId = "channelPublicId"
         case relation = "relation"
         case updatedAt = "updatedAt"
+    }
+}
+
+/// 카카오톡 간편 채널 추가 결과를 제공합니다.
+public struct FollowChannelResult: Codable {
+    ///요청 결과
+    public let success: Bool
+    
+    ///요청한 채널의 public ID
+    public let channelPublicId: String
+    
+    enum CodingKeys : String, CodingKey {
+        case success = "status"
+        case channelPublicId = "channelPublicId"
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        success = try values.decode(String.self, forKey: .success) == "success" ? true : false
+        channelPublicId = try values.decode(String.self, forKey: .channelPublicId)
     }
 }
 

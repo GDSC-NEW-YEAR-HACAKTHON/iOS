@@ -304,6 +304,7 @@
 				888209352B51551B0017EBD9 /* Frameworks */,
 				888209362B51551B0017EBD9 /* Resources */,
 				30A8E3E7CEFE963AABAA273C /* [CP] Embed Pods Frameworks */,
+				FD9E4677361D7E76F9E77A8F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,6 +343,7 @@
 				888209552B51551D0017EBD9 /* Frameworks */,
 				888209562B51551D0017EBD9 /* Resources */,
 				8F76E2F588481EA561715FFB /* [CP] Embed Pods Frameworks */,
+				CA58EB307AF9F6F2507946D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -525,6 +527,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Profess-ProfessUITests/Pods-Profess-ProfessUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA58EB307AF9F6F2507946D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Profess-ProfessUITests/Pods-Profess-ProfessUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Profess-ProfessUITests/Pods-Profess-ProfessUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Profess-ProfessUITests/Pods-Profess-ProfessUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD9E4677361D7E76F9E77A8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Profess/Pods-Profess-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Profess/Pods-Profess-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Profess/Pods-Profess-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

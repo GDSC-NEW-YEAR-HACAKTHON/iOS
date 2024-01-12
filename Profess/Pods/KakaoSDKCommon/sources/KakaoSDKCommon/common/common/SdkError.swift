@@ -25,9 +25,14 @@ public enum SdkError : Error {
     
     /// 로그인 에러
     case AuthFailed(reason:AuthFailureReason, errorInfo:AuthErrorInfo?)
+    
+    /// Apps 에러
+    case AppsFailed(reason:AppsFailureReason, errorInfo:AppsErrorInfo?)
 }
 
-/// :nodoc:
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 extension SdkError {
     public init(reason:ClientFailureReason = .Unknown, message:String? = nil) {
         switch reason {
@@ -38,20 +43,24 @@ extension SdkError {
         case .Cancelled:
             self = .ClientFailed(reason: reason, errorMessage:message ?? "user cancelled")
         case .NotSupported:
-            self = .ClientFailed(reason: reason, errorMessage: "target app is not installed.")
+            self = .ClientFailed(reason: reason, errorMessage:message ?? "target app is not installed.")
         case .BadParameter:
             self = .ClientFailed(reason: reason, errorMessage:message ?? "bad parameters.")
         case .TokenNotFound:
             self = .ClientFailed(reason: reason, errorMessage: message ?? "authentication tokens not exist.")
         case .CastingFailed:
             self = .ClientFailed(reason: reason, errorMessage: message ?? "casting failed.")
+        case .IllegalState:
+            self = .ClientFailed(reason: reason, errorMessage:message ?? "illegal state.")
         case .Unknown:
             self = .ClientFailed(reason: reason, errorMessage:message ?? "unknown error.")
         }
     }
 }
 
-/// :nodoc:
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 extension SdkError {
     public init?(response:HTTPURLResponse, data:Data, type:ApiType) {
         if 200 ..< 300 ~= response.statusCode { return nil }
@@ -71,17 +80,22 @@ extension SdkError {
             else {
                 return nil
             }
-        }
-    }
-    
-    public init?(parameters: [String: String]) {
-        if let authErrorInfo = try? SdkJSONDecoder.custom.decode(AuthErrorInfo.self, from: JSONSerialization.data(withJSONObject: parameters, options: [])) {
-            self = .AuthFailed(reason: authErrorInfo.error, errorInfo: authErrorInfo)
-        } else {
+        @unknown default:
             return nil
         }
     }
     
+    //for Auth
+    public init?(parameters: [String: String]) {
+        if let authErrorInfo = try? SdkJSONDecoder.custom.decode(AuthErrorInfo.self, from: JSONSerialization.data(withJSONObject: parameters, options: [])) {
+            self = .AuthFailed(reason: authErrorInfo.error, errorInfo: authErrorInfo)
+        } 
+        else {
+            return nil
+        }
+    }
+    
+    //for Api
     public init(scopes:[String]?) {
         let errorInfo = ErrorInfo(code: .InsufficientScope, msg: "", requiredScopes: scopes)
         self = .ApiFailed(reason: errorInfo.code, errorInfo: errorInfo)
@@ -90,13 +104,24 @@ extension SdkError {
     public init(apiFailedMessage:String? = nil) {
         self = .ApiFailed(reason: .Unknown, errorInfo: ErrorInfo(code: .Unknown, msg:apiFailedMessage ?? "Unknown Error", requiredScopes: nil))
     }
+    
+    //for Apps
+    public init?(appsParameters: [String: String]) {
+        if let appsErrorInfo = try? SdkJSONDecoder.custom.decode(AppsErrorInfo.self, from: JSONSerialization.data(withJSONObject: appsParameters, options: [])) {
+            self = .AppsFailed(reason: appsErrorInfo.errorCode, errorInfo: appsErrorInfo)
+        }
+        else {
+            return nil
+        }
+    }
 }
 
 //helper
 extension SdkError {
     
     /// 클라이언트 에러인지 확인합니다.
-    /// - seealso: `ClientFailureReason`
+    /// ## SeeAlso
+    /// - ``ClientFailureReason``
     public var isClientFailed : Bool {
         if case .ClientFailed = self {
             return true
@@ -105,7 +130,8 @@ extension SdkError {
     }
     
     /// API 서버 에러인지 확인합니다.
-    /// - seealso: `ApiFailureReason`
+    /// ## SeeAlso
+    /// - ``ApiFailureReason``
     public var isApiFailed : Bool {
         if case .ApiFailed = self {
             return true
@@ -114,7 +140,8 @@ extension SdkError {
     }
     
     /// 인증 서버 에러인지 확인합니다.
-    /// - seealso: `AuthFailureReason`
+    /// ## SeeAlso
+    /// - ``AuthFailureReason``
     public var isAuthFailed : Bool {
         if case .AuthFailed = self {
             return true
@@ -122,8 +149,20 @@ extension SdkError {
         return false
     }
     
+    /// APPS 서버 에러인지 확인합니다.
+    /// ## SeeAlso
+    /// - ``AppsFailureReason``
+    public var isAppsFailed : Bool {
+        if case .AppsFailed = self {
+            return true
+        }
+        return false
+    }
+    
+    
     /// 클라이언트 에러 정보를 얻습니다. `isClientFailed`가 true인 경우 사용해야 합니다.
-    /// - seealso: `ClientFailureReason`
+    /// ## SeeAlso
+    /// - ``ClientFailureReason``
     public func getClientError() -> (reason:ClientFailureReason, message:String?) {
         if case let .ClientFailed(reason, message) = self {
             return (reason, message)
@@ -132,7 +171,9 @@ extension SdkError {
     }
     
     /// API 요청 에러에 대한 정보를 얻습니다. `isApiFailed`가 true인 경우 사용해야 합니다.
-    /// - seealso: `ApiFailureReason` <br> `ErrorInfo`
+    /// ## SeeAlso
+    /// - ``ApiFailureReason``
+    /// - ``ErrorInfo``
     public func getApiError() -> (reason:ApiFailureReason, info:ErrorInfo?) {
         if case let .ApiFailed(reason, info) = self {
             return (reason, info)
@@ -141,12 +182,25 @@ extension SdkError {
     }
     
     /// 로그인 요청 에러에 대한 정보를 얻습니다. `isAuthFailed`가 true인 경우 사용해야 합니다.
-    /// - seealso: `AuthFailureReason` <br> `AuthErrorInfo`
+    /// ## SeeAlso
+    /// - ``AuthFailureReason``
+    /// - ``AuthErrorInfo``
     public func getAuthError() -> (reason:AuthFailureReason, info:AuthErrorInfo?) {
         if case let .AuthFailed(reason, info) = self {
             return (reason, info)
         }
         return (AuthFailureReason.Unknown, nil)
+    }
+    
+    /// APPS 요청 에러에 대한 정보를 얻습니다. `isAppsFailed`가 true인 경우 사용해야 합니다.
+    /// ## SeeAlso
+    /// - ``AppsFailureReason``
+    /// - ``AppsErrorInfo``
+    public func getAppsError() -> (reason:AppsFailureReason, info:AppsErrorInfo?) {
+        if case let .AppsFailed(reason, info) = self {
+            return (reason, info)
+        }
+        return (AppsFailureReason.Unknown, nil)
     }
     
     /// 유효하지 않은 토큰 에러인지 체크합니다.
@@ -191,6 +245,9 @@ public enum ClientFailureReason {
     
     /// type casting 실패
     case CastingFailed
+    
+    /// 정상적으로 실행할 수 없는 상태
+    case IllegalState
 }
 
 /// API 서버 에러 종류 입니다.
@@ -246,6 +303,17 @@ public enum ApiFailureReason : Int, Codable {
     
     ///연령제한에 걸림
     case UnderAgeLimit = -406
+    
+    //TODO: aos와 이름 맞춰야 함.
+    ///아직 서명이 완료되지 않은 경우 (papi error code=E2006)
+    case SigningIsNotCompleted = -421
+    
+    ///전자서명 유효시간 내에(5분) 서명이 완료되지 않은 경우 (papi error code=E2007)
+    case InvalidTransaction = -422
+    
+    ///public key 유효시간(24시간)이 expired 된 경우 (papi error code=E2016)
+    case TransactionHasExpired = -423
+    
 
     /// 앱의 연령제한보다 사용자의 연령이 낮음
     case LowerAgeLimit = -451
@@ -276,30 +344,23 @@ public enum ApiFailureReason : Int, Codable {
     
     /// 일간 메시지 전송 허용 횟수 초과
     case TalkSendMessageDailyLimitExceed = -532
+        
+    /// 이미지 업로드 시 최대 용량을 초과한 경우
+    case ImageUploadSizeExceed = -602
     
-    /// 카카오스토리 사용자가 아님
-    case NotStoryUser = -601
+    /// 카카오 플랫폼 내부에서 요청 처리 중 타임아웃이 발생한 경우
+    case ServerTimeout = -603
     
-    /// 카카오스토리 이미지 업로드 사이즈 제한 초과
-    case StoryImageUploadSizeExceed = -602
-    
-    /// 카카오스토리 이미지 업로드 타임아웃
-    case StoryUploadTimeout = -603
-    
-    /// 카카오스토리 스크랩시 잘못된 스크랩 URL로 호출할 경우
-    case StoryInvalidScrapUrl = -604
-    
-    /// 카카오스토리의 내정보 요청시 잘못된 내스토리 아이디(포스트 아이디)로 호출할 경우
-    case StoryInvalidPostId = -605
-    
-    /// 카카오스토리 이미지 업로드시 허용된 업로드 파일 수가 넘을 경우
-    case StoryMaxUploadNumberExceed = -606
+    /// 이미지 업로드시 허용된 업로드 파일 수가 넘을 경우
+    case ImageMaxUploadNumberExceed = -606
     
     /// 서버 점검 중
     case UnderMaintenance = -9798
 }
 
-/// :nodoc:
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 extension ApiFailureReason {
     public init(from decoder: Decoder) throws {
         self = try ApiFailureReason(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? .Unknown
@@ -336,13 +397,84 @@ public enum AuthFailureReason : String, Codable {
     /// 서버 내부 에러
     case ServerError = "server_error"
     
-    /// :nodoc: 카카오싱크 전용
+#if swift(>=5.8)
+    @_documentation(visibility: private)
+#endif
+    /// 카카오싱크 전용
     case AutoLogin = "auto_login"
 }
 
-/// :nodoc:
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 extension AuthFailureReason {
     public init(from decoder: Decoder) throws {
         self = try AuthFailureReason(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? .Unknown
+    }
+}
+
+/// Apps 요청 에러 종류 입니다.
+public enum AppsFailureReason : String, Codable {
+    /// 내부 서버 에러가 발생하는 경우
+    case InternalServerError = "KAE001"
+
+    /// 잘못된 요청을 사용하는 경우
+    case InvalidRequest = "KAE002"
+
+    /// 잘못된 파라미터를 사용하는 경우
+    case InvalidParameter = "KAE003"
+
+    /// 유효시간이 만료된 경우
+    case TimeExpired = "KAE004"
+    
+    /// 채널 정보를 확인할 수 없는 경우
+    case InvalidChannel = "KAE005"
+    
+    /// 채널 추가 가능한 상태가 아닌 경우
+    case IllegalStateChannel = "KAE006"
+
+    /// API를 사용할 수 없는 앱 타입인 경우
+    case AppTypeError = "KAE101"
+
+    /// API 사용에 필요한 scope이 설정되지 않은 경우
+    case AppScopeError = "KAE102"
+
+    /// API 사용에 필요한 권한이 없는 경우
+    case PermissionError = "KAE103"
+
+    /// API 호출에 사용할 수 없는 앱키 타입으로 API를 호출하는 경우
+    case AppKeyTypeError = "KAE104"
+    
+    /// 앱과 연결되지 않은 채널 정보로 요청한 경우
+    case AppChannelNotConnected = "KAE105"
+
+    /// Access Token, KPIDT, 톡세션 등으로 앱 유저 인증에 실패하는 경우
+    case AuthError = "KAE201"
+
+    /// 앱에 연결되지 않은 유저가 API를 호출하는 경우
+    case NotRegistredUser = "KAE202"
+
+    /// API 호출에 필요한 scope에 동의하지 않은 경우
+    case InvalidScope = "KAE203"
+
+    /// API 사용에 필요한 계정 약관 동의가 되어 있지 않은 경우
+    case AccountTermsError = "KAE204"
+
+    /// 계정 페이지에서 배송지 콜백으로 로그인 필요 응답을 전달하는 경우
+    case LoginRequired = "KAE205"
+
+    /// 계정에 등록되어있지 않은 배송지 ID를 파라미터로 사용하는 경우
+    case InvalidShippingAddressId = "KAE206"
+    
+    /// 예외
+    case Unknown
+}
+
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
+extension AppsFailureReason {
+    public init(from decoder: Decoder) throws {
+        self = try AppsFailureReason(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? .Unknown
     }
 }

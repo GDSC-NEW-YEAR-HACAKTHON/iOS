@@ -57,7 +57,8 @@ public enum FriendOrder : String, Codable {
 }
 
 /// 친구 목록 조회 API 응답 클래스 입니다.
-/// - seealso: `TalkApi.friends(offset:limit:order:)`
+/// ## SeeAlso
+/// - ``TalkApi.friends(offset:limit:order:)``
 public struct Friends<T:Codable> : Codable {
     
     // MARK: Fields
@@ -84,7 +85,8 @@ public struct Friends<T:Codable> : Codable {
 }
 
 /// 친구 목록 조회 컨텍스트 입니다.
-/// - seealso: `TalkApi.friends(friendsContext:)`
+/// ## SeeAlso
+/// - ``TalkApi/friends(context:completion:)``
 public struct FriendsContext {
     public let offset : Int?
     public let limit : Int?
@@ -123,9 +125,6 @@ public struct Friend : Codable {
     /// 사용자 아이디
     public let id: Int64?
     
-    /// :nodoc:
-    public let serviceUserId: Int64?
-    
     /// 메시지를 전송하기 위한 고유 아이디
     ///
     /// 사용자의 계정 상태에 따라 이 정보는 바뀔 수 있습니다. 앱내의 사용자 식별자로 저장 사용되는 것은 권장하지 않습니다.
@@ -146,14 +145,13 @@ public struct Friend : Codable {
     // MARK: Internal
     
     enum CodingKeys : String, CodingKey {
-        case id, serviceUserId, uuid, profileNickname, profileThumbnailImage, favorite, allowedMsg
+        case id, uuid, profileNickname, profileThumbnailImage, favorite, allowedMsg
     }
     
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try? values.decode(Int64.self, forKey: .id)
-        serviceUserId = try? values.decode(Int64.self, forKey: .serviceUserId)
         uuid = try values.decode(String.self, forKey: .uuid)
         profileNickname = try? values.decode(String.self, forKey: .profileNickname)
         profileThumbnailImage = URL(string:(try? values.decode(String.self, forKey: .profileThumbnailImage)) ?? "")
