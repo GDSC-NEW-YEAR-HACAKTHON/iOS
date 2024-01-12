@@ -7,4 +7,14 @@
 
 import Foundation
 
+struct InviteCodeModel: Decodable {
+    var goal : String
+    var deadline : Date
+    var postChallengeSteps : postChallengeSteps?
+}
 
+struct postChallengeSteps : Decodable {
+    var content : String
+    var deadline : Date
+    var completed : Bool
+}
