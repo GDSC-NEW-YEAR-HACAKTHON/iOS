@@ -7,61 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		888208D02B514ED50017EBD9 /* demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888208CF2B514ED50017EBD9 /* demoApp.swift */; };
-		888208D22B514ED50017EBD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888208D12B514ED50017EBD9 /* ContentView.swift */; };
-		888208D42B514ED70017EBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888208D32B514ED70017EBD9 /* Assets.xcassets */; };
-		888208D72B514ED70017EBD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888208D62B514ED70017EBD9 /* Preview Assets.xcassets */; };
-		888208E12B514ED70017EBD9 /* demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888208E02B514ED70017EBD9 /* demoTests.swift */; };
-		888208EB2B514ED80017EBD9 /* demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888208EA2B514ED80017EBD9 /* demoUITests.swift */; };
-		888208ED2B514ED80017EBD9 /* demoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888208EC2B514ED80017EBD9 /* demoUITestsLaunchTests.swift */; };
+		888209062B5153E00017EBD9 /* ProfessEffectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888209052B5153E00017EBD9 /* ProfessEffectApp.swift */; };
+		888209082B5153E00017EBD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888209072B5153E00017EBD9 /* ContentView.swift */; };
+		8882090A2B5153E20017EBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888209092B5153E20017EBD9 /* Assets.xcassets */; };
+		8882090D2B5153E20017EBD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8882090C2B5153E20017EBD9 /* Preview Assets.xcassets */; };
+		888209172B5153E30017EBD9 /* ProfessEffectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888209162B5153E30017EBD9 /* ProfessEffectTests.swift */; };
+		888209212B5153E30017EBD9 /* ProfessEffectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888209202B5153E30017EBD9 /* ProfessEffectUITests.swift */; };
+		888209232B5153E30017EBD9 /* ProfessEffectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888209222B5153E30017EBD9 /* ProfessEffectUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		888208DD2B514ED70017EBD9 /* PBXContainerItemProxy */ = {
+		888209132B5153E30017EBD9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 888208C42B514ED50017EBD9 /* Project object */;
+			containerPortal = 888208FA2B5153E00017EBD9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 888208CB2B514ED50017EBD9;
-			remoteInfo = demo;
+			remoteGlobalIDString = 888209012B5153E00017EBD9;
+			remoteInfo = ProfessEffect;
 		};
-		888208E72B514ED70017EBD9 /* PBXContainerItemProxy */ = {
+		8882091D2B5153E30017EBD9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 888208C42B514ED50017EBD9 /* Project object */;
+			containerPortal = 888208FA2B5153E00017EBD9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 888208CB2B514ED50017EBD9;
-			remoteInfo = demo;
+			remoteGlobalIDString = 888209012B5153E00017EBD9;
+			remoteInfo = ProfessEffect;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		888208CC2B514ED50017EBD9 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		888208CF2B514ED50017EBD9 /* demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoApp.swift; sourceTree = "<group>"; };
-		888208D12B514ED50017EBD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		888208D32B514ED70017EBD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		888208D62B514ED70017EBD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		888208DC2B514ED70017EBD9 /* demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		888208E02B514ED70017EBD9 /* demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoTests.swift; sourceTree = "<group>"; };
-		888208E62B514ED70017EBD9 /* demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		888208EA2B514ED80017EBD9 /* demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoUITests.swift; sourceTree = "<group>"; };
-		888208EC2B514ED80017EBD9 /* demoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		888209022B5153E00017EBD9 /* ProfessEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfessEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		888209052B5153E00017EBD9 /* ProfessEffectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessEffectApp.swift; sourceTree = "<group>"; };
+		888209072B5153E00017EBD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		888209092B5153E20017EBD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8882090C2B5153E20017EBD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		888209122B5153E30017EBD9 /* ProfessEffectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfessEffectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		888209162B5153E30017EBD9 /* ProfessEffectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessEffectTests.swift; sourceTree = "<group>"; };
+		8882091C2B5153E30017EBD9 /* ProfessEffectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfessEffectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		888209202B5153E30017EBD9 /* ProfessEffectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessEffectUITests.swift; sourceTree = "<group>"; };
+		888209222B5153E30017EBD9 /* ProfessEffectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessEffectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		888208C92B514ED50017EBD9 /* Frameworks */ = {
+		888208FF2B5153E00017EBD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		888208D92B514ED70017EBD9 /* Frameworks */ = {
+		8882090F2B5153E30017EBD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		888208E32B514ED70017EBD9 /* Frameworks */ = {
+		888209192B5153E30017EBD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,142 +71,142 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		888208C32B514ED50017EBD9 = {
+		888208F92B5153E00017EBD9 = {
 			isa = PBXGroup;
 			children = (
-				888208CE2B514ED50017EBD9 /* demo */,
-				888208DF2B514ED70017EBD9 /* demoTests */,
-				888208E92B514ED70017EBD9 /* demoUITests */,
-				888208CD2B514ED50017EBD9 /* Products */,
+				888209042B5153E00017EBD9 /* ProfessEffect */,
+				888209152B5153E30017EBD9 /* ProfessEffectTests */,
+				8882091F2B5153E30017EBD9 /* ProfessEffectUITests */,
+				888209032B5153E00017EBD9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		888208CD2B514ED50017EBD9 /* Products */ = {
+		888209032B5153E00017EBD9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				888208CC2B514ED50017EBD9 /* demo.app */,
-				888208DC2B514ED70017EBD9 /* demoTests.xctest */,
-				888208E62B514ED70017EBD9 /* demoUITests.xctest */,
+				888209022B5153E00017EBD9 /* ProfessEffect.app */,
+				888209122B5153E30017EBD9 /* ProfessEffectTests.xctest */,
+				8882091C2B5153E30017EBD9 /* ProfessEffectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		888208CE2B514ED50017EBD9 /* demo */ = {
+		888209042B5153E00017EBD9 /* ProfessEffect */ = {
 			isa = PBXGroup;
 			children = (
-				888208CF2B514ED50017EBD9 /* demoApp.swift */,
-				888208D12B514ED50017EBD9 /* ContentView.swift */,
-				888208D32B514ED70017EBD9 /* Assets.xcassets */,
-				888208D52B514ED70017EBD9 /* Preview Content */,
+				888209052B5153E00017EBD9 /* ProfessEffectApp.swift */,
+				888209072B5153E00017EBD9 /* ContentView.swift */,
+				888209092B5153E20017EBD9 /* Assets.xcassets */,
+				8882090B2B5153E20017EBD9 /* Preview Content */,
 			);
-			path = demo;
+			path = ProfessEffect;
 			sourceTree = "<group>";
 		};
-		888208D52B514ED70017EBD9 /* Preview Content */ = {
+		8882090B2B5153E20017EBD9 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				888208D62B514ED70017EBD9 /* Preview Assets.xcassets */,
+				8882090C2B5153E20017EBD9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		888208DF2B514ED70017EBD9 /* demoTests */ = {
+		888209152B5153E30017EBD9 /* ProfessEffectTests */ = {
 			isa = PBXGroup;
 			children = (
-				888208E02B514ED70017EBD9 /* demoTests.swift */,
+				888209162B5153E30017EBD9 /* ProfessEffectTests.swift */,
 			);
-			path = demoTests;
+			path = ProfessEffectTests;
 			sourceTree = "<group>";
 		};
-		888208E92B514ED70017EBD9 /* demoUITests */ = {
+		8882091F2B5153E30017EBD9 /* ProfessEffectUITests */ = {
 			isa = PBXGroup;
 			children = (
-				888208EA2B514ED80017EBD9 /* demoUITests.swift */,
-				888208EC2B514ED80017EBD9 /* demoUITestsLaunchTests.swift */,
+				888209202B5153E30017EBD9 /* ProfessEffectUITests.swift */,
+				888209222B5153E30017EBD9 /* ProfessEffectUITestsLaunchTests.swift */,
 			);
-			path = demoUITests;
+			path = ProfessEffectUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		888208CB2B514ED50017EBD9 /* demo */ = {
+		888209012B5153E00017EBD9 /* ProfessEffect */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 888208F02B514ED80017EBD9 /* Build configuration list for PBXNativeTarget "demo" */;
+			buildConfigurationList = 888209262B5153E30017EBD9 /* Build configuration list for PBXNativeTarget "ProfessEffect" */;
 			buildPhases = (
-				888208C82B514ED50017EBD9 /* Sources */,
-				888208C92B514ED50017EBD9 /* Frameworks */,
-				888208CA2B514ED50017EBD9 /* Resources */,
+				888208FE2B5153E00017EBD9 /* Sources */,
+				888208FF2B5153E00017EBD9 /* Frameworks */,
+				888209002B5153E00017EBD9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = demo;
-			productName = demo;
-			productReference = 888208CC2B514ED50017EBD9 /* demo.app */;
+			name = ProfessEffect;
+			productName = ProfessEffect;
+			productReference = 888209022B5153E00017EBD9 /* ProfessEffect.app */;
 			productType = "com.apple.product-type.application";
 		};
-		888208DB2B514ED70017EBD9 /* demoTests */ = {
+		888209112B5153E30017EBD9 /* ProfessEffectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 888208F32B514ED80017EBD9 /* Build configuration list for PBXNativeTarget "demoTests" */;
+			buildConfigurationList = 888209292B5153E30017EBD9 /* Build configuration list for PBXNativeTarget "ProfessEffectTests" */;
 			buildPhases = (
-				888208D82B514ED70017EBD9 /* Sources */,
-				888208D92B514ED70017EBD9 /* Frameworks */,
-				888208DA2B514ED70017EBD9 /* Resources */,
+				8882090E2B5153E30017EBD9 /* Sources */,
+				8882090F2B5153E30017EBD9 /* Frameworks */,
+				888209102B5153E30017EBD9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				888208DE2B514ED70017EBD9 /* PBXTargetDependency */,
+				888209142B5153E30017EBD9 /* PBXTargetDependency */,
 			);
-			name = demoTests;
-			productName = demoTests;
-			productReference = 888208DC2B514ED70017EBD9 /* demoTests.xctest */;
+			name = ProfessEffectTests;
+			productName = ProfessEffectTests;
+			productReference = 888209122B5153E30017EBD9 /* ProfessEffectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		888208E52B514ED70017EBD9 /* demoUITests */ = {
+		8882091B2B5153E30017EBD9 /* ProfessEffectUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 888208F62B514ED80017EBD9 /* Build configuration list for PBXNativeTarget "demoUITests" */;
+			buildConfigurationList = 8882092C2B5153E30017EBD9 /* Build configuration list for PBXNativeTarget "ProfessEffectUITests" */;
 			buildPhases = (
-				888208E22B514ED70017EBD9 /* Sources */,
-				888208E32B514ED70017EBD9 /* Frameworks */,
-				888208E42B514ED70017EBD9 /* Resources */,
+				888209182B5153E30017EBD9 /* Sources */,
+				888209192B5153E30017EBD9 /* Frameworks */,
+				8882091A2B5153E30017EBD9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				888208E82B514ED70017EBD9 /* PBXTargetDependency */,
+				8882091E2B5153E30017EBD9 /* PBXTargetDependency */,
 			);
-			name = demoUITests;
-			productName = demoUITests;
-			productReference = 888208E62B514ED70017EBD9 /* demoUITests.xctest */;
+			name = ProfessEffectUITests;
+			productName = ProfessEffectUITests;
+			productReference = 8882091C2B5153E30017EBD9 /* ProfessEffectUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		888208C42B514ED50017EBD9 /* Project object */ = {
+		888208FA2B5153E00017EBD9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					888208CB2B514ED50017EBD9 = {
+					888209012B5153E00017EBD9 = {
 						CreatedOnToolsVersion = 15.2;
 					};
-					888208DB2B514ED70017EBD9 = {
+					888209112B5153E30017EBD9 = {
 						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 888208CB2B514ED50017EBD9;
+						TestTargetID = 888209012B5153E00017EBD9;
 					};
-					888208E52B514ED70017EBD9 = {
+					8882091B2B5153E30017EBD9 = {
 						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 888208CB2B514ED50017EBD9;
+						TestTargetID = 888209012B5153E00017EBD9;
 					};
 				};
 			};
-			buildConfigurationList = 888208C72B514ED50017EBD9 /* Build configuration list for PBXProject "demo" */;
+			buildConfigurationList = 888208FD2B5153E00017EBD9 /* Build configuration list for PBXProject "ProfessEffect" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,36 +214,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 888208C32B514ED50017EBD9;
-			productRefGroup = 888208CD2B514ED50017EBD9 /* Products */;
+			mainGroup = 888208F92B5153E00017EBD9;
+			productRefGroup = 888209032B5153E00017EBD9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				888208CB2B514ED50017EBD9 /* demo */,
-				888208DB2B514ED70017EBD9 /* demoTests */,
-				888208E52B514ED70017EBD9 /* demoUITests */,
+				888209012B5153E00017EBD9 /* ProfessEffect */,
+				888209112B5153E30017EBD9 /* ProfessEffectTests */,
+				8882091B2B5153E30017EBD9 /* ProfessEffectUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		888208CA2B514ED50017EBD9 /* Resources */ = {
+		888209002B5153E00017EBD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888208D72B514ED70017EBD9 /* Preview Assets.xcassets in Resources */,
-				888208D42B514ED70017EBD9 /* Assets.xcassets in Resources */,
+				8882090D2B5153E20017EBD9 /* Preview Assets.xcassets in Resources */,
+				8882090A2B5153E20017EBD9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		888208DA2B514ED70017EBD9 /* Resources */ = {
+		888209102B5153E30017EBD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		888208E42B514ED70017EBD9 /* Resources */ = {
+		8882091A2B5153E30017EBD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,49 +253,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		888208C82B514ED50017EBD9 /* Sources */ = {
+		888208FE2B5153E00017EBD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888208D22B514ED50017EBD9 /* ContentView.swift in Sources */,
-				888208D02B514ED50017EBD9 /* demoApp.swift in Sources */,
+				888209082B5153E00017EBD9 /* ContentView.swift in Sources */,
+				888209062B5153E00017EBD9 /* ProfessEffectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		888208D82B514ED70017EBD9 /* Sources */ = {
+		8882090E2B5153E30017EBD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888208E12B514ED70017EBD9 /* demoTests.swift in Sources */,
+				888209172B5153E30017EBD9 /* ProfessEffectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		888208E22B514ED70017EBD9 /* Sources */ = {
+		888209182B5153E30017EBD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888208EB2B514ED80017EBD9 /* demoUITests.swift in Sources */,
-				888208ED2B514ED80017EBD9 /* demoUITestsLaunchTests.swift in Sources */,
+				888209232B5153E30017EBD9 /* ProfessEffectUITestsLaunchTests.swift in Sources */,
+				888209212B5153E30017EBD9 /* ProfessEffectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		888208DE2B514ED70017EBD9 /* PBXTargetDependency */ = {
+		888209142B5153E30017EBD9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 888208CB2B514ED50017EBD9 /* demo */;
-			targetProxy = 888208DD2B514ED70017EBD9 /* PBXContainerItemProxy */;
+			target = 888209012B5153E00017EBD9 /* ProfessEffect */;
+			targetProxy = 888209132B5153E30017EBD9 /* PBXContainerItemProxy */;
 		};
-		888208E82B514ED70017EBD9 /* PBXTargetDependency */ = {
+		8882091E2B5153E30017EBD9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 888208CB2B514ED50017EBD9 /* demo */;
-			targetProxy = 888208E72B514ED70017EBD9 /* PBXContainerItemProxy */;
+			target = 888209012B5153E00017EBD9 /* ProfessEffect */;
+			targetProxy = 8882091D2B5153E30017EBD9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		888208EE2B514ED80017EBD9 /* Debug */ = {
+		888209242B5153E30017EBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,7 +358,7 @@
 			};
 			name = Debug;
 		};
-		888208EF2B514ED80017EBD9 /* Release */ = {
+		888209252B5153E30017EBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -414,14 +414,14 @@
 			};
 			name = Release;
 		};
-		888208F12B514ED80017EBD9 /* Debug */ = {
+		888209272B5153E30017EBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"demo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ProfessEffect/Preview Content\"";
 				DEVELOPMENT_TEAM = 9KR47X6UHQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -435,7 +435,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.ProfessEffect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -443,14 +443,14 @@
 			};
 			name = Debug;
 		};
-		888208F22B514ED80017EBD9 /* Release */ = {
+		888209282B5153E30017EBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"demo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ProfessEffect/Preview Content\"";
 				DEVELOPMENT_TEAM = 9KR47X6UHQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -464,7 +464,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.ProfessEffect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -472,7 +472,7 @@
 			};
 			name = Release;
 		};
-		888208F42B514ED80017EBD9 /* Debug */ = {
+		8882092A2B5153E30017EBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -483,16 +483,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.demoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.ProfessEffectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/demo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfessEffect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProfessEffect";
 			};
 			name = Debug;
 		};
-		888208F52B514ED80017EBD9 /* Release */ = {
+		8882092B2B5153E30017EBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -503,16 +503,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.demoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.ProfessEffectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/demo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfessEffect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProfessEffect";
 			};
 			name = Release;
 		};
-		888208F72B514ED80017EBD9 /* Debug */ = {
+		8882092D2B5153E30017EBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -521,16 +521,16 @@
 				DEVELOPMENT_TEAM = 9KR47X6UHQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.demoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.ProfessEffectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = demo;
+				TEST_TARGET_NAME = ProfessEffect;
 			};
 			name = Debug;
 		};
-		888208F82B514ED80017EBD9 /* Release */ = {
+		8882092E2B5153E30017EBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -539,55 +539,55 @@
 				DEVELOPMENT_TEAM = 9KR47X6UHQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.demoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = jikbb2.ProfessEffectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = demo;
+				TEST_TARGET_NAME = ProfessEffect;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		888208C72B514ED50017EBD9 /* Build configuration list for PBXProject "demo" */ = {
+		888208FD2B5153E00017EBD9 /* Build configuration list for PBXProject "ProfessEffect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				888208EE2B514ED80017EBD9 /* Debug */,
-				888208EF2B514ED80017EBD9 /* Release */,
+				888209242B5153E30017EBD9 /* Debug */,
+				888209252B5153E30017EBD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		888208F02B514ED80017EBD9 /* Build configuration list for PBXNativeTarget "demo" */ = {
+		888209262B5153E30017EBD9 /* Build configuration list for PBXNativeTarget "ProfessEffect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				888208F12B514ED80017EBD9 /* Debug */,
-				888208F22B514ED80017EBD9 /* Release */,
+				888209272B5153E30017EBD9 /* Debug */,
+				888209282B5153E30017EBD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		888208F32B514ED80017EBD9 /* Build configuration list for PBXNativeTarget "demoTests" */ = {
+		888209292B5153E30017EBD9 /* Build configuration list for PBXNativeTarget "ProfessEffectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				888208F42B514ED80017EBD9 /* Debug */,
-				888208F52B514ED80017EBD9 /* Release */,
+				8882092A2B5153E30017EBD9 /* Debug */,
+				8882092B2B5153E30017EBD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		888208F62B514ED80017EBD9 /* Build configuration list for PBXNativeTarget "demoUITests" */ = {
+		8882092C2B5153E30017EBD9 /* Build configuration list for PBXNativeTarget "ProfessEffectUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				888208F72B514ED80017EBD9 /* Debug */,
-				888208F82B514ED80017EBD9 /* Release */,
+				8882092D2B5153E30017EBD9 /* Debug */,
+				8882092E2B5153E30017EBD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 888208C42B514ED50017EBD9 /* Project object */;
+	rootObject = 888208FA2B5153E00017EBD9 /* Project object */;
 }

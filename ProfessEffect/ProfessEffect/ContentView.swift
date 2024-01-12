@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  demo
+//  ProfessEffect
 //
 //  Created by byeoungjik on 1/12/24.
 //

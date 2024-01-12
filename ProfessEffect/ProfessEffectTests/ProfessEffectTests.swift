@@ -1,14 +1,14 @@
 //
-//  demoTests.swift
-//  demoTests
+//  ProfessEffectTests.swift
+//  ProfessEffectTests
 //
 //  Created by byeoungjik on 1/12/24.
 //
 
 import XCTest
-@testable import demo
+@testable import ProfessEffect
 
-final class demoTests: XCTestCase {
+final class ProfessEffectTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
