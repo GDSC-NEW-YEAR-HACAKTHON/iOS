@@ -61,6 +61,9 @@
                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                             <color key="baseBackgroundColor" red="0.92156863209999995" green="0.30196079609999998" blue="0.26274511220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="nextButtonTapped:" destination="LkU-fM-sLK" eventType="touchUpInside" id="QGG-XE-yST"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진행 중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyD-EI-vbk">
                         <rect key="frame" x="94" y="10" width="68" height="29"/>

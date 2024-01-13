@@ -14,7 +14,6 @@ struct InviteCodeModel: Decodable {
 }
 
 struct postChallengeSteps : Decodable {
-    var challengeStepId : Int
     var content : String
     var deadline : Date
     var completed : Bool

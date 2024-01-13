@@ -10,6 +10,10 @@ import UIKit
 class UnlockStepTableViewCell: UITableViewCell {
     static let identifier = "UnlockStepTableViewCell"
     
+    weak var viewController: ChallengerHomeViewController?
+    let dataManager = ChallengeStepCheckDataManager()
+    var challengeStepId: Int?
+    
     @IBOutlet weak var stepLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var stepDetailBackgroundView: UIView!
@@ -25,8 +29,26 @@ class UnlockStepTableViewCell: UITableViewCell {
         // Initialization code
     }
     
+    //MARK: -Actions
+    
+        @IBAction func nextButtonTapped(_ sender: UIButton) {
+            // nextButton이 눌렸을 때 challengeStepId를 확인하고 알려주는 코드 추가
+            if let stepId = challengeStepId {
+                print("Challenge Step ID: \(stepId)")
+                
+
+               
+                
+
+            } else {
+                print("Challenge Step ID is not available.")
+            }
+        }
+    
+
     // MARK: - UnlockStepTableViewCell Configuration
     func configure(with step: challengeSteps, at index: Int) {
+        self.challengeStepId = step.challengeStepId
         self.stepLabel.text = "STEP \(index + 1)"
         self.stepExplanationLabel.text = step.content
         
@@ -44,6 +66,11 @@ class UnlockStepTableViewCell: UITableViewCell {
                 self.stepDeadlineLabel.text = "00:00:00"
                 countdownTimer?.invalidate()
                 countdownTimer = nil
+                
+                // MARK: -DELETE API 요청
+                let deleteDataManager = DeleteDataManager()
+                    deleteDataManager.DeleteDataManager()
+                
             } else {
                 // 남은 시간을 포맷에 맞춰 문자열로 변환합니다.
                 self.stepDeadlineLabel.text = timeString(time: timeInterval)

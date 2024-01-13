@@ -1,13 +1,13 @@
 //
-//  WatchHomeViewController.swift
+//  ChallengerHomeViewController.swift
 //  Profess
 //
-//  Created by 정민지 on 1/12/24.
+//  Created by 정민지 on 1/13/24.
 //
 
 import UIKit
 
-class WatchHomeViewController: UIViewController {
+class ChallengerHomeViewController: UIViewController {
     //MARK: -Properties
     @IBOutlet weak var TitleNavigationBar: UINavigationBar!
     @IBOutlet weak var StepTableView: UITableView!
@@ -17,14 +17,14 @@ class WatchHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        fetchChallengeContent()
+        fetchChallengerContent()
         
         checkAndNavigateIfEmpty()
     }
     //MARK: -API호출
-    private func fetchChallengeContent() {
-            let dataManager = CheckChallengeContentDataManager()
-            dataManager.CheckChallengeContentDataManager(self)
+    private func fetchChallengerContent() {
+            let dataManager = ChallengerContentDataManager()
+            dataManager.ChallengerContentDataManager(self)
         }
     
     //MARK: -Navigator
@@ -54,8 +54,8 @@ class WatchHomeViewController: UIViewController {
     }
 }
 
-extension WatchHomeViewController {
-    func successAPI(_ result: CheckChallengeContentModel) {
+extension ChallengerHomeViewController {
+    func successAPI2(_ result: CheckChallengeContentModel) {
         challengeContent = result
         if let goal = challengeContent?.goal {
                     self.navigationItem.title = goal
@@ -66,15 +66,15 @@ extension WatchHomeViewController {
 
     
     //MARK: - UITableViewDelegate, UITableViewDataSource
-extension WatchHomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension ChallengerHomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return challengeContent?.challengeSteps?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let step = challengeContent?.challengeSteps?[indexPath.row] else {
-            fatalError("Could not find step for indexPath")
-        }
+                    fatalError("Could not find step for indexPath")
+                }
         
         // 완료된 셀 반환x
         if step.completed {
@@ -96,6 +96,6 @@ extension WatchHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 cell.configure(with: step, at: indexPath.row)
                 return cell
+                }
         }
-    }
 }

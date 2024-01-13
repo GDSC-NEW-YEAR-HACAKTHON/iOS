@@ -18,6 +18,13 @@
 		2D15AB6E2B5196180014EB1D /* InviteCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15AB6D2B5196180014EB1D /* InviteCodeManager.swift */; };
 		2DFB3BCD2B51C4C50022FD3E /* CheckChallengeContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BCC2B51C4C50022FD3E /* CheckChallengeContentModel.swift */; };
 		2DFB3BCF2B51C5CB0022FD3E /* CheckChallengeContentDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BCE2B51C5CB0022FD3E /* CheckChallengeContentDataManager.swift */; };
+		2DFB3BD52B51F9A80022FD3E /* ChallengerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BD42B51F9A80022FD3E /* ChallengerHomeViewController.swift */; };
+		2DFB3BD72B51FBFA0022FD3E /* ChallengerContentDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BD62B51FBFA0022FD3E /* ChallengerContentDataManager.swift */; };
+		2DFB3BE22B51FE630022FD3E /* DeleteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BE12B51FE630022FD3E /* DeleteDataManager.swift */; };
+		2DFB3BE42B51FF6B0022FD3E /* SuccessDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BE32B51FF6B0022FD3E /* SuccessDataManager.swift */; };
+		2DFB3BE62B5206D20022FD3E /* ChallengeStepCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BE52B5206D20022FD3E /* ChallengeStepCheckModel.swift */; };
+		2DFB3BE82B5206E80022FD3E /* ChallengeStepCheckInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BE72B5206E80022FD3E /* ChallengeStepCheckInput.swift */; };
+		2DFB3BEA2B5206F60022FD3E /* ChallengeStepCheckDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3BE92B5206F60022FD3E /* ChallengeStepCheckDataManager.swift */; };
 		8882093C2B51551B0017EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882093B2B51551B0017EBD9 /* AppDelegate.swift */; };
 		8882093E2B51551B0017EBD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882093D2B51551B0017EBD9 /* SceneDelegate.swift */; };
 		888209402B51551B0017EBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882093F2B51551B0017EBD9 /* ViewController.swift */; };
@@ -69,6 +76,13 @@
 		2D15AB6D2B5196180014EB1D /* InviteCodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeManager.swift; sourceTree = "<group>"; };
 		2DFB3BCC2B51C4C50022FD3E /* CheckChallengeContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckChallengeContentModel.swift; path = Profess/Watcher/AddChallengerCode/InviteCodeInput/CheckChallengeContentModel.swift; sourceTree = SOURCE_ROOT; };
 		2DFB3BCE2B51C5CB0022FD3E /* CheckChallengeContentDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckChallengeContentDataManager.swift; path = Profess/Watcher/AddChallengerCode/InviteCodeInput/CheckChallengeContentDataManager.swift; sourceTree = SOURCE_ROOT; };
+		2DFB3BD42B51F9A80022FD3E /* ChallengerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengerHomeViewController.swift; sourceTree = "<group>"; };
+		2DFB3BD62B51FBFA0022FD3E /* ChallengerContentDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChallengerContentDataManager.swift; path = Profess/Challenger/ChallengerMain/model/ChallengerContentDataManager.swift; sourceTree = SOURCE_ROOT; };
+		2DFB3BE12B51FE630022FD3E /* DeleteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDataManager.swift; sourceTree = "<group>"; };
+		2DFB3BE32B51FF6B0022FD3E /* SuccessDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessDataManager.swift; sourceTree = "<group>"; };
+		2DFB3BE52B5206D20022FD3E /* ChallengeStepCheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeStepCheckModel.swift; sourceTree = "<group>"; };
+		2DFB3BE72B5206E80022FD3E /* ChallengeStepCheckInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeStepCheckInput.swift; sourceTree = "<group>"; };
+		2DFB3BE92B5206F60022FD3E /* ChallengeStepCheckDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeStepCheckDataManager.swift; sourceTree = "<group>"; };
 		32730CB7BCEC43EF10C470FD /* Pods-ProfessTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProfessTests.debug.xcconfig"; path = "Target Support Files/Pods-ProfessTests/Pods-ProfessTests.debug.xcconfig"; sourceTree = "<group>"; };
 		508A92E0911902EE254DA1E2 /* Pods-Profess-ProfessUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profess-ProfessUITests.release.xcconfig"; path = "Target Support Files/Pods-Profess-ProfessUITests/Pods-Profess-ProfessUITests.release.xcconfig"; sourceTree = "<group>"; };
 		509B5476C8DC8F2E2DE24F69 /* Pods-Profess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profess.release.xcconfig"; path = "Target Support Files/Pods-Profess/Pods-Profess.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +149,7 @@
 		2D15AB572B5161CF0014EB1D /* Watcher */ = {
 			isa = PBXGroup;
 			children = (
+				2DFB3BEB2B5206FD0022FD3E /* ChallengeStepCheck */,
 				2D15AB562B5161B40014EB1D /* WatcherHome */,
 				2D15AB582B5161E60014EB1D /* AddChallengerCode */,
 			);
@@ -203,6 +218,43 @@
 				2D15AB6D2B5196180014EB1D /* InviteCodeManager.swift */,
 			);
 			path = InviteCodeInput;
+			sourceTree = "<group>";
+		};
+		2DFB3BD82B51FC3E0022FD3E /* ChallengerMain */ = {
+			isa = PBXGroup;
+			children = (
+				2DFB3BDA2B51FC680022FD3E /* model */,
+				2DFB3BD92B51FC620022FD3E /* cell */,
+			);
+			path = ChallengerMain;
+			sourceTree = "<group>";
+		};
+		2DFB3BD92B51FC620022FD3E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				2DFB3BD42B51F9A80022FD3E /* ChallengerHomeViewController.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		2DFB3BDA2B51FC680022FD3E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2DFB3BE12B51FE630022FD3E /* DeleteDataManager.swift */,
+				2DFB3BE32B51FF6B0022FD3E /* SuccessDataManager.swift */,
+				2DFB3BD62B51FBFA0022FD3E /* ChallengerContentDataManager.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		2DFB3BEB2B5206FD0022FD3E /* ChallengeStepCheck */ = {
+			isa = PBXGroup;
+			children = (
+				2DFB3BE72B5206E80022FD3E /* ChallengeStepCheckInput.swift */,
+				2DFB3BE52B5206D20022FD3E /* ChallengeStepCheckModel.swift */,
+				2DFB3BE92B5206F60022FD3E /* ChallengeStepCheckDataManager.swift */,
+			);
+			path = ChallengeStepCheck;
 			sourceTree = "<group>";
 		};
 		5CE897668AB6A088107BF2D5 /* Pods */ = {
@@ -281,6 +333,7 @@
 				88AC9F632B519AE000FD346C /* DetailCard.xib */,
 				88AC9F672B5202E000FD346C /* DetailCell.swift */,
 				88AC9F652B519B1200FD346C /* DetailCardViewController.swift */,
+				2DFB3BD82B51FC3E0022FD3E /* ChallengerMain */,
 			);
 			path = Challenger;
 			sourceTree = "<group>";
@@ -573,23 +626,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFB3BEA2B5206F60022FD3E /* ChallengeStepCheckDataManager.swift in Sources */,
 				2DFB3BCD2B51C4C50022FD3E /* CheckChallengeContentModel.swift in Sources */,
 				888209402B51551B0017EBD9 /* ViewController.swift in Sources */,
 				88AC9F682B5202E000FD346C /* DetailCell.swift in Sources */,
+
+				2DFB3BE22B51FE630022FD3E /* DeleteDataManager.swift in Sources */,
+
 				2D15AB6C2B51953D0014EB1D /* InviteCodeModel.swift in Sources */,
 				2D15AB632B516C650014EB1D /* UnlockStepTableViewCell.swift in Sources */,
 				2DFB3BCF2B51C5CB0022FD3E /* CheckChallengeContentDataManager.swift in Sources */,
 				2D15AB6A2B5194E60014EB1D /* InviteCodeInput.swift in Sources */,
 				8882093C2B51551B0017EBD9 /* AppDelegate.swift in Sources */,
+				2DFB3BD52B51F9A80022FD3E /* ChallengerHomeViewController.swift in Sources */,
+				2DFB3BE42B51FF6B0022FD3E /* SuccessDataManager.swift in Sources */,
 				8882093E2B51551B0017EBD9 /* SceneDelegate.swift in Sources */,
 				2D15AB662B5179850014EB1D /* AddChallengerViewController.swift in Sources */,
 				2D15AB552B5161970014EB1D /* WatchHomeViewController.swift in Sources */,
 				2D15AB522B5161520014EB1D /* LockStepTableViewCell.swift in Sources */,
+				2DFB3BE62B5206D20022FD3E /* ChallengeStepCheckModel.swift in Sources */,
+				2DFB3BE82B5206E80022FD3E /* ChallengeStepCheckInput.swift in Sources */,
 				2D15AB6E2B5196180014EB1D /* InviteCodeManager.swift in Sources */,
 				88AC9F622B51834E00FD346C /* SettingDetail.swift in Sources */,
 				8882096C2B515D980017EBD9 /* SettingGoal.swift in Sources */,
 				8882093C2B51551B0017EBD9 /* AppDelegate.swift in Sources */,
 				8882093E2B51551B0017EBD9 /* SceneDelegate.swift in Sources */,
+				2DFB3BD72B51FBFA0022FD3E /* ChallengerContentDataManager.swift in Sources */,
 				88AC9F662B519B1200FD346C /* DetailCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

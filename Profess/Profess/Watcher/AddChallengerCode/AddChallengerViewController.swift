@@ -27,16 +27,17 @@ class AddChallengerViewController: UIViewController {
 
             let inviteCodeInput = InviteCodeInput(challengeCode: inviteCode)
         
-            let dataManager = InviteCodeDataManager()
-            dataManager.posts(self, inviteCodeInput)
+            //let dataManager = InviteCodeDataManager()
+            //dataManager.posts(self, inviteCodeInput)
+        navigateToWatchHomeViewController()
         }
 
-        func navigateToWatchHomeViewController() {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let watchHomeVC = storyboard.instantiateViewController(withIdentifier: "WatchHomeViewController") as? WatchHomeViewController {
-                self.navigationController?.pushViewController(watchHomeVC, animated: true)
-            }
+    func navigateToWatchHomeViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let watchHomeVC = storyboard.instantiateViewController(withIdentifier: "WatchHomeViewController") as? WatchHomeViewController {
+            self.navigationController?.pushViewController(watchHomeVC, animated: true)
         }
+    }
 
 
 }
