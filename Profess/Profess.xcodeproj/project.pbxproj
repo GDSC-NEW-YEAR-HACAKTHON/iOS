@@ -31,6 +31,7 @@
 		88AC9F622B51834E00FD346C /* SettingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9F612B51834E00FD346C /* SettingDetail.swift */; };
 		88AC9F642B519AE000FD346C /* DetailCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AC9F632B519AE000FD346C /* DetailCard.xib */; };
 		88AC9F662B519B1200FD346C /* DetailCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9F652B519B1200FD346C /* DetailCardViewController.swift */; };
+		88AC9F682B5202E000FD346C /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9F672B5202E000FD346C /* DetailCell.swift */; };
 		B46D57F77BEE54AE0D667693 /* Pods_ProfessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4358753FA0A9489E73D17E /* Pods_ProfessTests.framework */; };
 		EC6A4C820F890C334E2ADF1C /* Pods_Profess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173410FFE8C540F2C5341787 /* Pods_Profess.framework */; };
 		F1A42B020070F6CE8FBB39C9 /* Pods_Profess_ProfessUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0816F83DDCE5CF4923379A6F /* Pods_Profess_ProfessUITests.framework */; };
@@ -89,6 +90,7 @@
 		88AC9F612B51834E00FD346C /* SettingDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetail.swift; sourceTree = "<group>"; };
 		88AC9F632B519AE000FD346C /* DetailCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCard.xib; sourceTree = "<group>"; };
 		88AC9F652B519B1200FD346C /* DetailCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardViewController.swift; sourceTree = "<group>"; };
+		88AC9F672B5202E000FD346C /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		99C033B1B54E0BE2CADE34F5 /* Pods-Profess-ProfessUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profess-ProfessUITests.debug.xcconfig"; path = "Target Support Files/Pods-Profess-ProfessUITests/Pods-Profess-ProfessUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D19163B622C1A633724671F8 /* Pods-Profess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profess.debug.xcconfig"; path = "Target Support Files/Pods-Profess/Pods-Profess.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -277,6 +279,7 @@
 				8882096B2B515D980017EBD9 /* SettingGoal.swift */,
 				88AC9F612B51834E00FD346C /* SettingDetail.swift */,
 				88AC9F632B519AE000FD346C /* DetailCard.xib */,
+				88AC9F672B5202E000FD346C /* DetailCell.swift */,
 				88AC9F652B519B1200FD346C /* DetailCardViewController.swift */,
 			);
 			path = Challenger;
@@ -572,6 +575,7 @@
 			files = (
 				2DFB3BCD2B51C4C50022FD3E /* CheckChallengeContentModel.swift in Sources */,
 				888209402B51551B0017EBD9 /* ViewController.swift in Sources */,
+				88AC9F682B5202E000FD346C /* DetailCell.swift in Sources */,
 				2D15AB6C2B51953D0014EB1D /* InviteCodeModel.swift in Sources */,
 				2D15AB632B516C650014EB1D /* UnlockStepTableViewCell.swift in Sources */,
 				2DFB3BCF2B51C5CB0022FD3E /* CheckChallengeContentDataManager.swift in Sources */,
